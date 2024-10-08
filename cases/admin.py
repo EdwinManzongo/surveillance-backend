@@ -28,7 +28,7 @@ class CaseAdminForm(forms.ModelForm):
 @admin.register(Patient)
 class PatientAdmin(admin.ModelAdmin):
     list_display = ('full_name', 'date_of_birth', 'gender', 'contact_number')
-    search_fields = ('full_name', 'gender')
+    search_fields = ('first_name', 'last_name', 'gender')
     list_filter = 'gender',
     ordering = ('-id',)
     pass
